@@ -1,0 +1,178 @@
+:root {
+
+  --grape: lch( 40.014% 108.495 309.59 ); --grape-tint: lch( 44.014% 106.495 310.59 ); --grape-shade: lch( 36.014% 110.495 308.59 ); --grape-gradient: linear-gradient( 120deg, var(--grape-tint), var(--grape-shade) );
+  --raspberry: lch( 57.859% 97.892 326.222 ); --raspberry-tint: lch( 61.859% 95.892 327.222 ); --raspberry-shade: lch( 53.859% 99.892 325.222 ); --raspberry-gradient: linear-gradient( 120deg, var(--raspberry-tint), var(--raspberry-shade) );
+  --peach: lch( 71.881% 40.541 32.926 ); --peach-tint: lch( 75.881% 38.541 33.926 ); --peach-shade: lch( 67.881% 42.541 31.926000000000002 ); --peach-gradient: linear-gradient( 120deg, var(--peach-tint), var(--peach-shade) );
+  --lemon: lch( 94.17% 75.545 100.177 ); --lemon-tint: lch( 98.17% 73.545 101.177 ); --lemon-shade: lch( 90.17% 77.545 99.177 ); --lemon-gradient: linear-gradient( 120deg, var(--lemon-tint), var(--lemon-shade) );
+  --pear: lch( 77.247% 88.908 127.145 ); --pear-tint: lch( 81.247% 86.908 128.14499999999998 ); --pear-shade: lch( 73.247% 90.908 126.145 ); --pear-gradient: linear-gradient( 120deg, var(--pear-tint), var(--pear-shade) );
+  --lychee: lch( 94.314% 2.996 284.311 ); --lychee-tint: lch( 98.314% 0.996 285.311 ); --lychee-shade: lch( 90.314% 4.996 283.311 ); --lychee-gradient: linear-gradient( 120deg, var(--lychee-tint), var(--lychee-shade) );
+  --blackberry: lch( 9.116% 7.269 287.344 ); --blackberry-tint: lch( 13.116% 5.269 288.344 ); --blackberry-shade: lch( 5.116% 9.269 286.344 ); --blackberry-gradient: linear-gradient( 120deg, var(--blackberry-tint), var(--blackberry-shade) );
+
+  --white: lch( 100% 0 0 );
+  --black: lch( 4.807% 3.011 285.248 );
+
+
+
+  --lemonade-gradient: linear-gradient(
+    120deg,
+    var(--lemon),
+    var(--peach) 40%,
+    var(--raspberry)
+  );
+
+  --lemonade-text: linear-gradient(
+    120deg,
+    var(--peach),
+    var(--raspberry)
+  );
+
+
+
+
+  --primary: var(--grape);
+  --primary-tint: var(--grape-tint);
+  --primary-shade: var(--grape-shade);
+  --primary-transparent: color-mix(
+    in lch,
+    var(--primary),
+    80% transparent
+  );
+
+  --secondary: var(--raspberry);
+  --secondary-tint: var(--raspberry-tint);
+  --secondary-shade: var(--raspberry-shade);
+  --secondary-transparent: color-mix(
+    in lch,
+    var(--secondary),
+    80% transparent
+  );
+
+  --tertiary: var(--lemon);
+  --tertiary-tint: var(--lemon-tint);
+  --tertiary-shade: var(--lemon-shade);
+  --tertiary-transparent: color-mix(
+    in lch,
+    var(--tertiary),
+    80% transparent
+  );
+
+
+
+  --accent: var(--peach);
+  --accent-tint: var(--peach-tint);
+  --accent-shade: var(--peach-shade);
+  --accent-gradient: linear-gradient(
+    150deg,
+    var(--accent-tint),
+    var(--accent-shade)
+  );
+  --accent-transparent: color-mix(
+    in lch,
+    var(--accent),
+    80% transparent
+  );
+
+  --accent-inverted: var(--grape);
+  --accent-inverted-tint: var(--grape-tint);
+  --accent-inverted-shade: var(--grape-shade);
+  --accent-inverted-gradient: linear-gradient(
+    150deg,
+    var(--accent-inverted-tint),
+    var(--accent-inverted-shade)
+  );
+  --accent-inverted-transparent: color-mix(
+    in lch,
+    var(--accent-inverted),
+    80% transparent
+  );
+
+
+
+  --base: var(--lychee);
+  --surface: var(--lychee-tint);
+  --overlay: var(--lychee-shade);
+  --shadow: var(--lychee-shade);
+
+
+  --text: color-mix(
+    in lch,
+    var(--blackberry),
+    20% var(--base)
+  );
+  --text-highlight: var(--blackberry);
+  --text-muted: color-mix(
+    in lch,
+    var(--blackberry),
+    40% var(--base)
+  );
+  --text-inverted: var(--base);
+
+  --link-color: var(--accent-inverted);
+
+
+
+
+
+  @media (prefers-color-scheme: dark) {
+
+    --accent: var(--grape);
+    --accent-tint: var(--grape-tint);
+    --accent-shade: var(--grape-shade);
+    --accent-gradient: linear-gradient(
+      150deg,
+      var(--grape-tint),
+      var(--grape-shade)
+    );
+    --accent-transparent: color-mix(
+      in lch,
+      var(--grape),
+      80% transparent
+    );
+
+    --accent-inverted: var(--peach);
+    --accent-inverted-tint: var(--peach-tint);
+    --accent-inverted-shade: var(--peach-shade);
+    --accent-inverted-gradient: linear-gradient(
+      150deg,
+      var(--accent-inverted-tint),
+      var(--accent-inverted-shade)
+    );
+    --accent-inverted-transparent: color-mix(
+      in lch,
+      var(--accent-inverted),
+      80% transparent
+    );
+
+
+
+    --base: var(--blackberry);
+    --surface: var(--blackberry-tint);
+    --overlay: var(--blackberry-shade);
+    --shadow: color-mix(
+      in lch,
+      var(--blackberry-shade),
+      75% transparent
+    );
+
+
+
+    --text: color-mix(
+      in lch,
+      var(--lychee),
+      20% var(--base)
+    );
+
+    --text-highlight: var(--lychee);
+
+    --text-muted: color-mix(
+      in lch,
+      var(--lychee),
+      40% var(--base)
+    );
+
+
+    color-scheme: dark;
+
+  }
+
+}
