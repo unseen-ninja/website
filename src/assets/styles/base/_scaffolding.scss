@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+
+  outline-color: var(--accent, var(--primary));
+  outline-offset: 4px;
+
+  // cursor: none !important;
+
+}
+
+
+
+:root {
+
+  --base-size: 8;
+
+  --spacing-xs:  calc(var(--base-size) * 0.5 * .1rem);
+  --spacing-sm:  calc(var(--base-size) * 1   * .1rem);
+  --spacing-md:  calc(var(--base-size) * 2   * .1rem);
+  --spacing-lg:  calc(var(--base-size) * 4   * .1rem);
+  --spacing-xl:  calc(var(--base-size) * 8   * .1rem);
+  --spacing-xxl: calc(var(--base-size) * 16  * .1rem);
+
+}
+
+
+
+html { font-size: 62.5%; }
+
+
+
+body { height: 100svh; }
