@@ -90,6 +90,7 @@
 
     display: flex;
     align-items: center;
+    font-size: var(--font-size-small);
 
   }
 
