@@ -15,7 +15,7 @@
     <LinkCard
       title="Mastodon"
       url="https://social.catppuccin.com/@unseen_ninja"
-      target="@unseen_ninja@social.catppuccin.com"
+      target="@unseen_ninja"
       icon="fa-brands fa-mastodon"
       colour="peach"
     />
@@ -64,9 +64,15 @@
 
   .card-grid {
 
-    display: grid; gap: var(--spacing-lg);
-    grid-template: auto / repeat(auto-fit, minmax(360px, 1fr));
+    display: grid; gap: var(--spacing-md);
 
+
+    @media (min-width: 800px) {
+
+      gap: var(--spacing-lg);
+      grid-template: auto / repeat(auto-fit, minmax(340px, 1fr));
+
+    }
   }
 
 </style>
