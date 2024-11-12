@@ -18,8 +18,9 @@
   </header>
 
   <nav>
-    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/linktree">Linktree</RouterLink>
     <RouterLink to="/about">About</RouterLink>
+    <RouterLink to="/">Home</RouterLink>
   </nav>
 
   <main>

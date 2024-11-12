@@ -38,6 +38,20 @@
 
 
 
+:root {
+
+  --font-size-4x: 248%;
+  --font-size-3x: 207%;
+  --font-size-2x: 172%;
+  --font-size-xl: 144%;
+  --font-size-large: 120%;
+  --font-size-regular: 100%;
+  --font-size-small:  83%;
+
+}
+
+
+
 ::selection {
 
   background-color: color-mix(
@@ -69,14 +83,14 @@ p, ul, ol, pre, blockquote { margin-block: 1em; }
 
 ul[class], ol[class] { margin: 0; padding: 0; }
 
-h1    { font-size: 248%; font-weight: 800; }
-h2    { font-size: 207%; font-weight: 800; }
-h3    { font-size: 172%; font-weight: 600; }
-h4    { font-size: 144%; font-weight: 600; }
-h5    { font-size: 120%; }
-h6    { font-size: 100%; }
-p     { font-size: 100%; }
-small { font-size:  83%; }
+h1    { font-size: var(--font-size-4x); font-weight: 800; }
+h2    { font-size: var(--font-size-3x); font-weight: 800; }
+h3    { font-size: var(--font-size-2x); font-weight: 600; }
+h4    { font-size: var(--font-size-xl); font-weight: 600; }
+h5    { font-size: var(--font-size-large); }
+h6    { font-size: var(--font-size-regular); }
+p     { font-size: var(--font-size-regular); }
+small { font-size:  var(--font-size-small); }
 
 h1, h2 { line-height: 1.2; }
 

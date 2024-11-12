@@ -15,6 +15,11 @@ const router = createRouter({
       path: '/about',
       name: 'about',
       component: () => import('../views/AboutView.vue')
+    },
+    {
+      path: '/linktree',
+      name: 'linktree',
+      component: () => import('../views/LinkView.vue')
     }
   ]
 })

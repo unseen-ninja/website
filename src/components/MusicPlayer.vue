@@ -4,8 +4,8 @@
 
 
   let audio = new (AudioContext)(),
-      src: string = '/assets/music/electrostatic.mp3',
-      trackName: string = 'lemon — Electrostatic',
+      src: string = '/assets/music/neon-arcadia.mp3',
+      trackName: string = 'lemon — neon arcadia',
       pausedText: string = 'Click to play Music',
       trackInfo = ref(pausedText),
       audioData: any, playerNode: any
@@ -90,6 +90,7 @@
 
     display: flex;
     align-items: center;
+    font-size: var(--font-size-small);
 
   }
 
@@ -113,7 +114,7 @@
   #player #track-info { padding-inline-start: var(--spacing-sm); }
 
 
-  #play-button svg { height: 4.8rem; }
+  #play-button svg { height: 3.2rem; }
   #play-button svg > * { fill: var(--text-highlight); }
   #play-button:hover svg > * { fill: var(--peach); }
 

@@ -4,14 +4,14 @@
     <svg width="100%" height="100%" viewBox="0 0 4267 4267">
 
       <rect
+        id="logo-top"
         x="1115" y="170"
         width="1625" height="1625"
-        style="fill: url(#raspberry);"
       />
 
       <path
+        id="logo-bot"
         d="M1526.24,2981.3l-0,-1620.12l1619.56,-0l0,1487.91c0,839.151 -986.656,1211.95 -986.656,1211.95l-270.99,-311.808c-33.405,-38.565 -26.368,-97.117 14.544,-127.613c358.818,-268.269 358.724,-507.638 358.724,-507.638l0.188,-132.68l-735.371,0Z"
-        style="fill: url(#lemon);"
       />
 
       <path
@@ -79,6 +79,13 @@
 
     @media (min-width: 500px) { padding: calc(var(--spacing-md) * .8); }
     @media (min-width: 800px) { padding: calc(var(--spacing-sm) * .75); }
+
+
+    #logo-top { fill: url(#raspberry); }
+    &:hover #logo-top { fill: url(#lemon); }
+
+    #logo-bot { fill: url(#lemon); }
+    &:hover #logo-bot { fill: url(#raspberry); }
 
   }
 
