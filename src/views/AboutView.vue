@@ -31,6 +31,53 @@
 
 <style scoped lang="scss">
 
+
+  #about {
+
+    position: relative;
+
+    height: 100%;
+    padding: 2em;
+
+    border-radius: var(--spacing-md);
+    background-color: var(--lychee-tint);
+    box-shadow: 0 .6rem 1.2rem 0 var(--shadow);
+
+
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--blackberry-tint);
+    }
+
+
+    &::before {
+
+      content: '';
+
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+
+      border-radius: var(--spacing-md);
+
+      pointer-events: none;
+
+    }
+
+
+    &::before {
+
+      opacity: 50%;
+
+      background-image: url('/assets/images/noise.png');
+      background-repeat: repeat;
+      mix-blend-mode: overlay;
+
+    }
+
+  }
+
+
+
   .image {
 
     position: relative;

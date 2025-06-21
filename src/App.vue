@@ -18,12 +18,9 @@
   </header>
 
   <nav>
-    <a href="https://ctp-webr.ing/unseen-ninja/next"><i class="fa-solid fa-arrow-down"></i></a>
-    <a href="https://ctp-webr.ing/">Webring</a>
     <RouterLink to="/linktree">Linktree</RouterLink>
     <RouterLink to="/about">About</RouterLink>
     <RouterLink to="/">Home</RouterLink>
-    <a href="https://ctp-webr.ing/unseen-ninja/previous"><i class="fa-solid fa-arrow-up"></i></a>
   </nav>
 
   <main>
@@ -33,7 +30,9 @@
   </main>
 
   <footer>
-    <MusicPlayer />
+    <a href="https://ctp-webr.ing/unseen-ninja/previous"><i class="fa-solid fa-arrow-left"></i></a>
+    <a href="https://ctp-webr.ing/">Webring</a>
+    <a href="https://ctp-webr.ing/unseen-ninja/next"><i class="fa-solid fa-arrow-right"></i></a>
   </footer>
 
 </template>
@@ -81,9 +80,9 @@
 
 
       grid-template-areas:
-        "logo footer footer"
-        "nav main main"
-        "nav main main";
+        "logo nav nav"
+        "footer main main"
+        "footer main main";
 
     }
 
@@ -128,45 +127,11 @@
 
       @media (min-width: 800px) {
 
-        justify-content: start;
-
-        transform: rotate(180deg);
+        justify-content: end;
 
         padding-inline: var(--spacing-lg);
 
         background-color: transparent;
-
-        writing-mode: vertical-rl;
-        text-orientation: mixed;
-
-      }
-
-
-      a {
-
-        padding: var(--spacing-sm);
-
-        border-radius: var(--spacing-xs);
-
-        line-height: 1;
-        text-decoration: none;
-        color: var(--text-muted);
-
-        transition:
-        background-color .3s,
-        color .3s;
-
-
-        &:hover {
-
-          background-color: var(--shadow);
-
-          color: var(--text);
-
-        }
-
-
-        &.router-link-active { color: var(--text-highlight); }
 
       }
 
@@ -185,7 +150,66 @@
 
 
       @media (min-width: 500px) { padding: var(--spacing-md); }
-      @media (min-width: 800px) { padding: var(--spacing-lg); }
+
+      @media (min-width: 800px) {
+
+        justify-content: start;
+
+        padding: var(--spacing-lg);
+
+        transform: rotate(180deg);
+
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+
+
+        a > i {
+          transform-origin: center center;
+        }
+
+        a:nth-child(1) > i {
+          transform: rotate(90deg);
+        }
+
+        a:nth-child(3) > i {
+          transform: rotate(90deg);
+        }
+
+      }
+
+    }
+
+  }
+
+
+  nav,
+  footer {
+
+    a {
+
+      padding: var(--spacing-sm);
+
+      border-radius: var(--spacing-xs);
+
+      line-height: 1;
+      text-decoration: none;
+      color: var(--text-muted);
+
+      transition:
+      background-color .3s,
+      color .3s;
+
+
+      &:hover {
+
+        background-color: var(--shadow);
+
+        color: var(--text);
+
+      }
+
+
+      &.router-link-active { color: var(--text-highlight); }
 
     }
 
