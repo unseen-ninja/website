@@ -18,9 +18,12 @@
   </header>
 
   <nav>
+    <a href="https://ctp-webr.ing/unseen-ninja/next"><i class="fa-solid fa-arrow-down"></i></a>
+    <a href="https://ctp-webr.ing/">Webring</a>
     <RouterLink to="/linktree">Linktree</RouterLink>
     <RouterLink to="/about">About</RouterLink>
     <RouterLink to="/">Home</RouterLink>
+    <a href="https://ctp-webr.ing/unseen-ninja/previous"><i class="fa-solid fa-arrow-up"></i></a>
   </nav>
 
   <main>
