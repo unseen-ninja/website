@@ -13,13 +13,16 @@
   <article id="about">
 
     <p class="pre-heading">About Me</p>
-    <h1>Hi! My name's <span class="text-lemonade">lemon</span>. <Wave :size=24 /></h1>
+    <h1>Hi! My name's <span class="text-lemonade">lemon</span>. <Wave :size=32 /></h1>
 
-    <p>and I'm »[…] just a regular everyday normal guy« working on design and code thingies like <a href="https://catppuccin.com">Catppuccin</a> – well, sometimes. <span class="text-lemonade">#opensource</span> advocate and according to League of Graphs: <strong><span class="text-lemonade">a top 1% support player.</span></strong></p>
-    <p>Always quite keen on new challenges I spent the past 15-ish years digging into design principles and web technologies – always trying to stay up to date with the latest and greatest design trends and tech stuff the ever-changing digital landscape – we all grew so accustomed to – has to offer.</p>
-    <p>Nowadays I don't get to work too much on web stuff as my main job is in communications, social media and press work. But whenever I get the chance I'll dig myself into some nice HTML, CSS and JavaScript.</p>
-    <p>Besides web dev I also dabble into Linux <small><em>ackchyually it's GNU/Linux??! I use arch btw.</em></small>, home and process automation, server side stuff, and cyber security.</p>
-    <p>Outside the tech space or well… at least partially I enjoy video games, hiking <small><em>really depends on my mood tho</em></small> or just reading a good book.</p>
+    <p>By day, I work in communications, social media, and press relations, helping organizations shape their voice and stay connected in a fast-moving digital world.</p>
+    <p>By night (and on weekends), I still get my hands dirty with design, code, and open source projects like <a href="https://github.com/catppuccin" target="_blank" rel="noopener noreferrer">Catppuccin</a> – a passion that stuck with me for over 15 years.</p>
+    <p>I’ve always been drawn to the overlap between tech and creativity, from crafting clean frontends with HTML/CSS/JS to tweaking automation setups, managing servers, or exploring cybersecurity. I’m also a long-time Linux user (<em>yes, I use Arch btw</em>) and a firm believer in the power of open systems.</p>
+    <p>Outside of tech, I recharge by diving into a good book, wandering through nature, or queueing up for another round of <em>League of Legends</em> (<em>top 1% support main – according to League of Graphs</em>).</p>
+    <p>
+      Whether I’m writing code or crafting copy, I love finding clarity in complexity. <br>
+      If you’re into that too, let’s connect.
+    </p>
 
   </article>
 
