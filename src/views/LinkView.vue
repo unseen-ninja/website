@@ -13,27 +13,19 @@
   <div class="card-grid">
 
     <LinkCard
+      title="Discord"
+      url="https://discord.com/"
+      target="@unseen.ninja"
+      icon="fa-brands fa-discord"
+      colour="grape"
+    />
+
+    <LinkCard
       title="Mastodon"
       url="https://social.catppuccin.com/@unseen_ninja"
       target="@unseen_ninja"
       icon="fa-brands fa-mastodon"
       colour="peach"
-    />
-
-    <LinkCard
-      title="League of Legends"
-      url="https://www.leagueofgraphs.com/summoner/euw/probably%20inting-fqm"
-      target="probably inting#FQM"
-      icon="fa-solid fa-gamepad"
-      colour="grape"
-    />
-
-    <LinkCard
-      title="Catppuccin"
-      url="https://catppuccin.com"
-      target="catppuccin.com"
-      icon="fa-solid fa-palette"
-      colour="raspberry"
     />
 
     <LinkCard
@@ -45,11 +37,11 @@
     />
 
     <LinkCard
-      title="Discord"
-      url="https://discord.com/"
-      target="@unseen.ninja"
-      icon="fa-brands fa-discord"
-      colour="peach"
+      title="Catppuccin"
+      url="https://catppuccin.com"
+      target="catppuccin.com"
+      icon="fa-solid fa-palette"
+      colour="raspberry"
     />
 
   </div>
