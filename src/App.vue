@@ -18,9 +18,10 @@
   </header>
 
   <nav>
-    <RouterLink to="/linktree">Linktree</RouterLink>
-    <RouterLink to="/about">About</RouterLink>
     <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/about">About</RouterLink>
+    <a href="https://dnd.unseen.ninja">DnD</a>
+    <RouterLink to="/linktree">Linktree</RouterLink>
   </nav>
 
   <main>
@@ -112,7 +113,7 @@
 
       grid-area: nav;
 
-      display: flex; flex-direction: row-reverse;
+      display: flex;
       align-items: center; justify-content: center;
       gap: var(--spacing-lg);
 
