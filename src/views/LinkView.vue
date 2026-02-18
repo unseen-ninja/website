@@ -22,8 +22,8 @@
 
     <LinkCard
       title="Mastodon"
-      url="https://social.catppuccin.com/@unseen_ninja"
-      target="@unseen_ninja"
+      url="https://nerdculture.de/@unseendotninja"
+      target="@unseendotninja"
       icon="fa-brands fa-mastodon"
       colour="peach"
     />
