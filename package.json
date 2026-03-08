@@ -1,36 +1,18 @@
 {
-  "name": "website-vue",
-  "version": "0.0.0",
-  "private": true,
+  "name": "unseen.ninja",
   "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
-    "preview": "vite preview",
-    "build-only": "vite build",
-    "type-check": "vue-tsc --build --force",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "pinia": "^2.3.1",
-    "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
-  },
-  "devDependencies": {
-    "@rushstack/eslint-patch": "^1.11.0",
-    "@tsconfig/node20": "^20.1.5",
-    "@types/node": "^20.17.30",
-    "@vitejs/plugin-vue": "^5.2.3",
-    "@vitejs/plugin-vue-jsx": "^3.1.0",
-    "@vue/eslint-config-typescript": "^13.0.0",
-    "@vue/tsconfig": "^0.5.1",
-    "eslint": "^9.24.0",
-    "eslint-plugin-vue": "^9.33.0",
-    "npm-run-all2": "^6.2.6",
-    "sass": "^1.86.3",
-    "typescript": "~5.4.5",
-    "vite": "^5.4.17",
-    "vite-plugin-vue-devtools": "^7.7.2",
-    "vue-tsc": "^2.2.8"
+    "@astrojs/mdx": "^4.3.13",
+    "@astrojs/rss": "^4.0.15",
+    "@astrojs/sitemap": "^3.7.0",
+    "astro": "6.0.0-beta.20",
+    "sharp": "^0.34.3"
   }
 }
