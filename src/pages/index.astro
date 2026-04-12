@@ -1,49 +1,121 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import Layout from '@layouts/Home.astro';
+
+import MetaData from '@components/MetaData.astro';
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+
+
+<Layout>
+
+  <MetaData slot="head:metadata" />
+
+  <svg id="logo-ninja" tabindex="0" width="100%" viewBox="0 0 1417 625" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <linearGradient id="gradient-raspberry" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="  0%" stop-color="var(--raspberry-tint)"></stop>
+        <stop offset="100%" stop-color="var(--raspberry-shade)"></stop>
+      </linearGradient>
+      <linearGradient id="gradient-lemon" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="  0%" stop-color="var(--lemon-tint)"></stop>
+        <stop offset="100%" stop-color="var(--lemon-shade)"></stop>
+      </linearGradient>
+    </defs>
+    <g id="unseen">
+      <path id="unseen-letter-u" d="M113.208,135.381c-26.472,0 -42.186,-15.005 -42.186,-40.062l0,-60.732l26.19,0l-0,60.732c-0,9.909 6.087,15.713 16.279,15.713c10.193,0 16.28,-5.804 16.28,-15.713l0,-60.732l26.19,0l-0,60.732c-0,25.057 -15.855,40.062 -42.753,40.062Z"></path>
+      <path id="unseen-letter-n1" d="M171.533,133.683l-0,-99.096l27.605,0l38.647,54.503l0,-54.503l26.19,0l-0,99.096l-26.19,-0l-40.063,-56.485l0,56.485l-26.189,-0Z"></path>
+      <path id="unseen-letter-s" d="M315.646,135.381c-18.687,0 -36.949,-11.183 -38.931,-24.066l26.048,-7.219c1.699,4.813 5.804,8.494 12.458,8.777c5.238,0.141 10.051,-3.115 10.051,-8.07c0,-3.256 -2.265,-6.512 -7.361,-7.786l-14.865,-3.822c-15.43,-3.964 -24.349,-14.581 -24.349,-29.445c0,-19.395 13.59,-30.861 36.949,-30.861c18.545,-0 30.578,6.795 37.373,23.499l-25.907,7.503c-0.991,-3.68 -4.813,-8.494 -11.466,-8.494c-6.371,0 -10.051,2.973 -10.051,8.353c-0,3.397 2.972,6.087 8.21,7.361l15.006,3.822c15.148,3.823 24.066,15.856 24.066,30.012c0,19.536 -14.015,30.436 -37.231,30.436Z"></path>
+      <path id="unseen-letter-e1" d="M365.901,133.683l0,-99.096l66.394,0l-0,24.066l-40.204,0l-0,13.732l32.559,0l0,23.358l-32.559,0l-0,13.874l41.195,-0l-0,24.066l-67.385,-0Z"></path>
+      <path id="unseen-letter-e2" d="M448.858,133.683l-0,-99.096l66.394,0l-0,24.066l-40.205,0l0,13.732l32.56,0l0,23.358l-32.56,0l0,13.874l41.196,-0l-0,24.066l-67.385,-0Z"></path>
+      <path id="unseen-letter-n2" d="M531.815,133.683l-0,-99.096l27.605,0l38.647,54.503l-0,-54.503l26.189,0l0,99.096l-26.189,-0l-40.063,-56.485l0,56.485l-26.189,-0Z"></path>
+      <path id="unseen-semicolon" d="M643.431,133.704l-0,-44.47l44.454,0l-0,40.841c-0,23.033 -27.082,33.266 -27.082,33.266l-7.438,-8.559c-0.917,-1.058 -0.724,-2.666 0.399,-3.503c9.849,-7.363 9.846,-13.933 9.846,-13.933l0.005,-3.642l-20.184,-0Zm-0,-99.144l44.454,0l0,44.454l-44.454,0l-0,-44.454Z"></path>
+    </g>
+    <g id="ninja">
+      <path id="shadow" d="M153.324,521.179l-0,-270.061l75.231,-0l105.324,148.534l0,-148.534l71.374,-0l-0,270.061l-71.374,0l-109.182,-153.935l-0,153.935l-71.373,0Zm317.515,0l-0,-270.061l71.373,-0l0,270.061l-71.373,0Zm136.96,0l-0,-270.061l75.231,-0l105.324,148.534l0,-148.534l71.374,-0l-0,270.061l-71.374,0l-109.182,-153.935l0,153.935l-71.373,0Zm317.515,77.161l0,-347.222l71.374,-0l-0,347.222l-71.374,-0Zm124.229,-77.161l103.395,-270.061l76.774,-0l103.395,270.061l-75.617,0l-15.818,-43.209l-100.694,-0l-15.818,43.209l-75.617,0Zm114.583,-106.095l54.398,-0l-27.006,-74.846l-27.392,74.846Z"></path>
+      <path id="text" d="M112.805,486.819l0,-270.062l75.232,0l105.324,148.534l-0,-148.534l71.373,0l0,270.062l-71.373,0l-109.182,-153.935l-0,153.935l-71.374,0Zm317.516,0l-0,-270.062l71.373,0l0,270.062l-71.373,0Zm136.96,0l-0,-270.062l75.231,0l105.324,148.534l0,-148.534l71.374,0l-0,270.062l-71.374,0l-109.182,-153.935l0,153.935l-71.373,0Zm317.515,77.161l0,-347.223l71.374,0l-0,347.223l-71.374,-0Zm124.229,-77.161l103.395,-270.062l76.774,0l103.395,270.062l-75.617,0l-15.818,-43.21l-100.694,0l-15.818,43.21l-75.617,0Zm114.583,-106.096l54.398,0l-27.006,-74.845l-27.392,74.845Z"></path>
+      <path id="outline" d="M71.219,165.007l100.512,-0l80.044,112.882l-0,-112.882l104.706,-0l0,303.395l-96.652,-0l-83.903,-118.295l-0,118.295l-104.707,-0l0,-303.395Zm16.667,286.728l71.373,0l0,-153.935l109.182,153.935l71.374,0l-0,-270.062l-71.374,0l0,148.534l-105.324,-148.534l-75.231,0l-0,270.062Zm300.849,-286.728l104.706,-0l0,303.395l-104.706,-0l-0,-303.395Zm16.666,286.728l71.374,0l-0,-270.062l-71.374,0l0,270.062Zm120.293,-286.728l100.512,-0l80.044,112.882l-0,-112.882l104.707,-0l-0,303.395l-96.652,-0l-83.904,-118.295l0,118.295l-104.707,-0l0,-303.395Zm16.667,286.728l71.374,0l-0,-153.935l109.182,153.935l71.373,0l0,-270.062l-71.373,0l-0,148.534l-105.324,-148.534l-75.232,0l0,270.062Zm300.849,-286.728l104.707,-0l-0,380.555l-104.707,0l-0,-380.555Zm16.667,363.889l71.373,-0l-0,-347.223l-71.373,0l-0,347.223Zm216.158,-363.889l99.705,-0l116.157,303.395l-111.492,-0l-15.818,-43.21l-77.4,-0l-15.818,43.21l-111.491,-0l116.157,-303.395Zm-91.93,286.728l75.617,0l15.818,-43.21l100.695,0l15.817,43.21l75.618,0l-103.395,-270.062l-76.775,0l-103.395,270.062Zm114.583,-106.096l27.392,-74.845l27.006,74.845l-54.398,0Z"></path>
+    </g>
+  </svg>
+
+</Layout>
+
+
+
+<style lang="scss">
+
+  @keyframes ninja {
+    from {
+      transform: scale(1.1) translateY(-10%);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+
+  #logo-ninja {
+    margin: 4.8rem;
+    width: 90%; max-width: 60ch;
+    outline: none;
+
+    #unseen-letter-u, #unseen-letter-n1, #unseen-letter-s,
+    #unseen-letter-e1, #unseen-letter-e2, #unseen-letter-n2,
+    #unseen-semicolon { fill: url(#gradient-lemon); }
+
+    #text     { fill: url(#gradient-raspberry); }
+    #outline  { fill: var(--lychee-tint); }
+    #shadow   { fill: var(--black); }
+  }
+
+
+  @media (prefers-reduced-motion) {
+    #logo-ninja,
+    #logo-ninja * { animation: none; }
+  }
+
+
+  #logo-ninja #shadow,
+  #logo-ninja #text,
+  #logo-ninja #outline {
+    transform: scale(1.1); transform-origin: center center;
+    animation: ninja 300ms ease-out forwards;
+    opacity: 0;
+  }
+
+
+
+  @keyframes unseen {
+    from {
+      transform: translateY(3%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+
+  #logo-ninja #shadow  { animation-delay: 500ms; }
+  #logo-ninja #text    { animation-delay: 650ms; }
+  #logo-ninja #outline { animation-delay: 800ms; }
+
+
+  #unseen > * {
+    transform: translateY(3%); transform-origin: center center;
+    animation: unseen 750ms ease-in forwards;
+    opacity: 0;
+  }
+
+
+  #logo-ninja #unseen-letter-u  { animation-delay: 1300ms; }
+  #logo-ninja #unseen-letter-n1 { animation-delay: 1400ms; }
+  #logo-ninja #unseen-letter-s  { animation-delay: 1500ms; }
+  #logo-ninja #unseen-letter-e1 { animation-delay: 1600ms; }
+  #logo-ninja #unseen-letter-e2 { animation-delay: 1700ms; }
+  #logo-ninja #unseen-letter-n2 { animation-delay: 1800ms; }
+  #logo-ninja #unseen-semicolon { animation-delay: 1900ms; }
+
+</style>

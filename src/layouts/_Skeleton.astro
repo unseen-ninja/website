@@ -1,0 +1,106 @@
+---
+import "@styles/palette.scss"
+
+import Navigation from "@layouts/_partials/Navigation.astro"
+import Logo from "@layouts/_partials/LogoSemicolon.astro"
+---
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <!-- Global Metadata -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <slot name="head:metadata" />
+
+    <meta name="darkreader-lock" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link type="text/plain" rel="author" href="/humans.txt" />
+  </head>
+  <body>
+
+    <header id="main-header">
+      <a id="logo" href="/">
+        <Logo />
+      </a>
+      <Navigation />
+    </header>
+
+    <slot />
+
+  </body>
+</html>
+
+
+
+<style lang="scss" is:global>
+
+  @use "@styles/globals.scss" as *;
+
+
+  html {
+    color-scheme: light dark;
+    font-size: 62.5%;
+  }
+
+
+  body {
+    --body-padding: clamp(2.4rem, 2rem + 2vw, 4.8rem);
+    --nav-size: 14.4rem;
+
+    margin: 0;
+    background-color: var(--background-color);
+    background-image: var(--background-gradient);
+    font: normal 500 clamp(1.5rem, 1.25rem + 1vw, 2rem)/1.6 'Figtree', 'Jost', 'Futura PT', 'Futura', 'Helvetica Neue', 'Calibri', system-ui, sans-serif;
+    color: var(--text-color-muted);
+
+    @media (width <= $mobile-breakpoint) {
+      padding-block-end: calc(var(--body-padding) * 2);
+    }
+
+    @media (width > $mobile-breakpoint) {
+      min-height: calc(100dvh - var(--body-padding) * 2);
+      padding-inline-start: var(--nav-size);
+    }
+  }
+
+
+  h1, h2, h3 { color: var(--text-color) }
+  a {
+    color: var(--primary);
+    transition: color 250ms;
+
+    &:hover { color: var(--secondary); }
+  }
+
+
+  header#main-header {
+    display: flex;
+    justify-content: center;
+
+    #logo svg {
+      --logo-size: clamp(4.8rem, 4rem + 2vw, 6.4rem);
+      height: var(--logo-size); width: var(--logo-size);
+    }
+
+
+    @media (width <= $mobile-breakpoint) {
+      margin-block: var(--body-padding);
+    }
+
+    @media (width > $mobile-breakpoint) {
+      position: fixed;
+      top: 0; bottom: 0; left: 0;
+      gap: 1.6rem;
+      flex-direction: column;
+      align-items: center; justify-content: space-between;
+      padding-block: var(--body-padding);
+      width: var(--nav-size);
+    }
+  }
+
+</style>

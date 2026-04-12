@@ -1,0 +1,31 @@
+$mobile-breakpoint: 800px;
+
+
+@mixin noise-overlay {
+  position: relative;
+  overflow: clip;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background-image: url('/assets/noise.png');
+    mix-blend-mode: overlay;
+    opacity: 50%;
+    pointer-events: none;
+  }
+}
+
+
+::selection {
+  background-color: var(--lemon);
+  color: var(--blackberry);
+}
+
+
+.text-color-lemonade {
+  background-image: var(--lemonade-gradient);
+  background-clip: text;
+  color: transparent;
+}

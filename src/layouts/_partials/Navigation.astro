@@ -1,0 +1,58 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+
+
+<nav>
+  <a href="https://ctp-webr.ing/unseen-ninja/previous"><Icon aria-hidden name="ph:arrow-left-bold" /></a>
+  <a href="/">Home</a>
+  <a href="about">About</a>
+  <a href="https://ctp-webr.ing/">Webring</a>
+  <a href="https://ctp-webr.ing/unseen-ninja/next"><Icon aria-hidden name="ph:arrow-right-bold" /></a>
+</nav>
+
+
+
+<style lang="scss">
+
+  @use "@styles/globals.scss" as *;
+
+
+  nav {
+    display: flex; gap: calc(var(--body-padding) * .6);
+    align-items: center; justify-content: space-around;
+
+    a {
+      color: var(--text-color-muted);
+      text-decoration: none;
+      transition: color 250ms;
+
+      &:hover { color: var(--text-color) }
+    }
+
+    [data-icon] {
+      font-size: 150%;
+      transform: translateY(4px);
+    }
+
+    @media (width <= $mobile-breakpoint) {
+      position: fixed;
+      right: var(--body-padding); bottom: var(--body-padding); left: var(--body-padding);
+      padding-block: .8rem;
+      border-radius: 4px;
+      background-color: var(--background-color-muted);
+    }
+
+    @media (width > $mobile-breakpoint) {
+      transform: rotate(180deg);
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+
+      [data-icon] { transform: rotate(90deg); }
+
+    }
+  }
+
+
+</style>

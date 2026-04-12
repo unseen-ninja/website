@@ -1,0 +1,61 @@
+---
+import { Icon } from 'astro-icon/components'
+
+interface Props {
+  colour?: 'primary' | 'secondary' | 'currentColor'
+}
+
+const { colour = 'currentColor' } = Astro.props
+
+let waveColour: string
+if (colour == 'primary' || colour == 'secondary') {
+  waveColour = `var(--${colour})`
+} else {
+  waveColour = colour
+}
+---
+
+<Icon id="wave" style=`--wave-colour: ${waveColour}` aria-hidden name="ph:hand-waving-bold" />
+
+<style lang="scss">
+  @keyframes wave {
+    0% {
+      rotate: 0deg;
+    }
+    10% {
+      rotate: 14deg;
+    }
+    20% {
+      rotate: -8deg;
+    }
+    30% {
+      rotate: 14deg;
+    }
+    40% {
+      rotate: -4deg;
+    }
+    50% {
+      rotate: 10deg;
+    }
+    60% {
+      rotate: 0deg;
+    }
+    100% {
+      rotate: 0deg;
+    }
+  }
+
+  #wave {
+    color: var(--wave-colour);
+    transform: translateY(0.1em);
+    transform-origin: center 0.6em;
+
+    @media (prefers-reduced-motion: no-preference) {
+      animation: wave 1500ms ease-in-out infinite;
+    }
+
+    @media print {
+      animation: none;
+    }
+  }
+</style>

@@ -1,0 +1,12 @@
+# This is Me!
+  Name: Lemon
+  From: Germany
+  Contact: lemon [at] unseen.ninja
+  Mastodon: https://nerdculture.de/@unseendotninja
+  Bluesky: https://bsky.app/profile/unseen.ninja
+  GitHub: https://github.com/unseen-ninja
+
+
+# Built with Astro
+  I absolutely love you people!
+  https://astro.build/

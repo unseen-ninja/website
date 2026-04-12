@@ -1,0 +1,43 @@
+---
+import Skeleton from "@layouts/_Skeleton.astro";
+---
+
+
+
+<Skeleton>
+
+  {/* This line propagates the OpenGraph data to the Skeleton's <head> */}
+  <slot name="head:metadata" slot="head:metadata" />
+
+  <main>
+    <slot />
+  </main>
+
+</Skeleton>
+
+
+
+<style lang="scss">
+
+  @use "@styles/globals.scss" as *;
+
+
+  main {
+    display: grid;
+    place-items: center;
+    margin: var(--body-padding);
+    height: 65dvh;
+    border-radius: 4px;
+    background-color: var(--grape);
+    background-image: var(--grape-gradient);
+
+    @media (width > $mobile-breakpoint) {
+      margin-inline-start: 0;
+      height: calc(100dvh - var(--body-padding) * 2);
+      border-radius: 1.6rem;
+    }
+
+    @include noise-overlay;
+  }
+
+</style>
