@@ -22,14 +22,62 @@ import Skeleton from "@layouts/_Skeleton.astro";
   @use "@styles/globals.scss" as *;
 
 
+  @keyframes background-transform {
+    0%, 100% { background-position: 0% 0%; }
+    25% { background-position: 100% 0%; }
+    50% { background-position: 100% 100%; }
+    75% { background-position: 0% 100%; }
+  }
+
+  @keyframes foreground-transform {
+    0%, 100% { transform: translate(-50%, 30%); }
+    33% { transform: translate(50%, 51%); }
+    66% { transform: translate(-10%, -50%); }
+  }
+
   main {
+    --gradient-background: var(--blackberry);
+    --gradient-foreground: var(--grape);
+
+    position: relative;
     display: grid;
     place-items: center;
     margin: var(--body-padding);
     height: 65dvh;
     border-radius: 4px;
-    background-color: var(--grape);
-    background-image: var(--grape-gradient);
+    background-color: var(--gradient-background);
+    background-image:
+      radial-gradient(
+        circle calc(60vmax * 2) at -10% 120%,
+        var(--gradient-foreground), transparent
+      ),
+      radial-gradient(
+        circle calc(40vmax * 2) at 100% 50%,
+        var(--gradient-background), transparent
+      ),
+      radial-gradient(
+        circle calc(50vmax * 2) at 0% 40%,
+        var(--gradient-background), transparent
+      ),
+      radial-gradient(
+        circle calc(60vmax * 2) at 90% 110%,
+        var(--gradient-foreground), transparent
+      ),
+      radial-gradient(
+        circle calc(30vmax * 2) at 60% -10%,
+        var(--gradient-background), transparent
+      ),
+      radial-gradient(
+        circle calc(70vmax * 2) at 10% -10%,
+        var(--gradient-foreground), transparent
+      ),
+      radial-gradient(
+        circle calc(50vmax * 2) at 80% -20%,
+        var(--gradient-foreground), transparent
+      )
+    ;
+    background-size: 200% 200%;
+    animation: background-transform 100s infinite;
 
     @media (width > $mobile-breakpoint) {
       margin-inline-start: 0;
@@ -38,6 +86,18 @@ import Skeleton from "@layouts/_Skeleton.astro";
     }
 
     @include noise-overlay;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(
+        circle 40vh at 50% 50%,
+        var(--gradient-foreground), transparent
+      );
+      scale: 400%;
+      animation: foreground-transform 120s infinite;
+    }
   }
 
 </style>
